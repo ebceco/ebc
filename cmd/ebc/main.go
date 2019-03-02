@@ -27,7 +27,6 @@ import (
 	"strings"
 	"time"
 
-	"github.com/elastic/gosigar"
 	"github.com/ebceco/ebc/accounts"
 	"github.com/ebceco/ebc/accounts/keystore"
 	"github.com/ebceco/ebc/cmd/utils"
@@ -38,11 +37,12 @@ import (
 	"github.com/ebceco/ebc/log"
 	"github.com/ebceco/ebc/metrics"
 	"github.com/ebceco/ebc/node"
-	"gopkg.in/urfave/cli.v1"
+	"github.com/elastic/gosigar"
+	cli "gopkg.in/urfave/cli.v1"
 )
 
 const (
-	clientIdentifier = "geth" // Client identifier to advertise over the network
+	clientIdentifier = "ebc" // Client identifier to advertise over the network
 )
 
 var (
@@ -170,7 +170,7 @@ var (
 
 func init() {
 	// Initialize the CLI app and start Geth
-	app.Action = geth
+	app.Action = ebc
 	app.HideVersion = true // we have a command to print the version
 	app.Copyright = "Copyright 2013-2018 The go-ethereum Authors"
 	app.Commands = []cli.Command{
@@ -260,7 +260,7 @@ func main() {
 // geth is the main entry point into the system if no special subcommand is ran.
 // It creates a default node based on the command line arguments and runs it in
 // blocking mode, waiting for it to be shut down.
-func geth(ctx *cli.Context) error {
+func ebc(ctx *cli.Context) error {
 	if args := ctx.Args(); len(args) > 0 {
 		return fmt.Errorf("invalid command: %q", args[0])
 	}

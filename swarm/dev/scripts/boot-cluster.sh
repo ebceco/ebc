@@ -137,12 +137,12 @@ start_bootnode() {
 }
 
 # start_geth_node starts a geth node with --datadir pointing at <base-dir>/geth
-# and a single, unlocked account with password "geth"
+# and a single, unlocked account with password "ebc"
 start_geth_node() {
   local dir="${base_dir}/geth"
   mkdir -p "${dir}"
 
-  local password="geth"
+  local password="ebc"
   echo "${password}" > "${dir}/password"
 
   # create an account if necessary
@@ -169,7 +169,7 @@ start_geth_node() {
     --verbosity "6"
   )
 
-  start_node "geth" "${GETH_IP}" "$(which geth)" ${args[@]}
+  start_node "ebc" "${GETH_IP}" "$(which geth)" ${args[@]}
 }
 
 start_swarm_nodes() {

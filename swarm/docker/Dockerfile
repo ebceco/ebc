@@ -10,7 +10,7 @@ RUN mkdir -p $GOPATH/src/github.com/ethereum && \
     git checkout ${VERSION} && \
     go install -ldflags "-X main.gitCommit=${VERSION}" ./cmd/swarm && \
     go install -ldflags "-X main.gitCommit=${VERSION}" ./cmd/swarm/swarm-smoke && \
-    go install -ldflags "-X main.gitCommit=${VERSION}" ./cmd/geth && \
+    go install -ldflags "-X main.gitCommit=${VERSION}" ./cmd/ebc && \
     cp $GOPATH/bin/swarm /swarm && cp $GOPATH/bin/geth /geth && cp $GOPATH/bin/swarm-smoke /swarm-smoke
 
 
