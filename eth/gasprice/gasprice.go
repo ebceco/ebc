@@ -29,7 +29,7 @@ import (
 	"github.com/ebceco/ebc/rpc"
 )
 
-var maxPrice = big.NewInt(500 * params.GWei)
+var maxPrice = big.NewInt(500 * params.MWei)
 
 type Config struct {
 	Blocks     int
