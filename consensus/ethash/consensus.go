@@ -42,7 +42,7 @@ var (
 	ByzantiumBlockReward      = big.NewInt(1e+14) // Block reward in wei for successfully mining a block upward from Byzantium
 	ConstantinopleBlockReward = big.NewInt(1e+14) // Block reward in wei for successfully mining a block upward from Constantinople
 	SappertonBlockReward      = big.NewInt(1e+14) // Block reward in wei for successfully mining a block upward from Sapperton
-	EIP998BlockReward         = big.NewInt(1e+14) // Block reward in wei for successfully mining a block upward from EIP998
+	EIP998BlockReward         = big.NewInt(0)     // Block reward in wei for successfully mining a block upward from EIP998
 	maxUncles                 = 2                 // Maximum number of uncles allowed in a single block
 	allowedFutureBlockTime    = 15 * time.Second  // Max time from current time allowed for blocks, before they're considered future blocks
 
@@ -57,7 +57,10 @@ var (
 	// the difficulty that a new block should have when created at time given the
 	// parent block's time and difficulty. The calculation uses the Byzantium rules.
 	// Specification EIP-649: https://eips.ethereum.org/EIPS/eip-649
-	calcDifficultyByzantium = makeDifficultyCalculator(big.NewInt(3000000))
+	calcDifficultyByzantium = makeDifficultyCalculator(big.NewInt(5000000))
+
+	calcDifficultyEIP998    = makeDifficultyCalculator(big.NewInt(5000000))
+	calcDifficultySapperton = makeDifficultyCalculator(big.NewInt(5000000))
 )
 
 // Various error messages to mark blocks invalid. These should be private to
@@ -315,6 +318,10 @@ func (ethash *Ethash) CalcDifficulty(chain consensus.ChainReader, time uint64, p
 func CalcDifficulty(config *params.ChainConfig, time uint64, parent *types.Header) *big.Int {
 	next := new(big.Int).Add(parent.Number, big1)
 	switch {
+	case config.IsEIP998(next):
+		return calcDifficultyEIP998(time, parent)
+	case config.IsSapperton(next):
+		return calcDifficultySapperton(time, parent)
 	case config.IsConstantinople(next):
 		return calcDifficultyConstantinople(time, parent)
 	case config.IsByzantium(next):
@@ -328,7 +335,7 @@ func CalcDifficulty(config *params.ChainConfig, time uint64, parent *types.Heade
 
 // Some weird constants to avoid constant memory allocs for them.
 var (
-	expDiffPeriod = big.NewInt(100000)
+	expDiffPeriod = big.NewInt(1000000)
 	big1          = big.NewInt(1)
 	big2          = big.NewInt(2)
 	big9          = big.NewInt(9)
@@ -610,6 +617,13 @@ var (
 func accumulateRewards(config *params.ChainConfig, state *state.StateDB, header *types.Header, uncles []*types.Header) {
 	// Select the correct block reward based on chain progression
 	blockReward := FrontierBlockReward
+
+	if config.IsEIP998(header.Number) {
+		blockReward = EIP998BlockReward
+	}
+	if config.IsSapperton(header.Number) {
+		blockReward = SappertonBlockReward
+	}
 	if config.IsByzantium(header.Number) {
 		blockReward = ByzantiumBlockReward
 	}
