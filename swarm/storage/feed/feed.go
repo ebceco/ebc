@@ -20,9 +20,9 @@ import (
 	"hash"
 	"unsafe"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/ebceco/ebc/common"
+	"github.com/ebceco/ebc/common/hexutil"
+	"github.com/ebceco/ebc/swarm/storage"
 )
 
 // Feed represents a particular user's stream of updates on a topic

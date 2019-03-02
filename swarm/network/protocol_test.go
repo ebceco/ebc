@@ -22,11 +22,11 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/protocols"
-	p2ptest "github.com/ethereum/go-ethereum/p2p/testing"
+	"github.com/ebceco/ebc/log"
+	"github.com/ebceco/ebc/p2p"
+	"github.com/ebceco/ebc/p2p/enode"
+	"github.com/ebceco/ebc/p2p/protocols"
+	p2ptest "github.com/ebceco/ebc/p2p/testing"
 )
 
 const (

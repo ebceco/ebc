@@ -22,12 +22,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/ebceco/ebc/common/hexutil"
+	"github.com/ebceco/ebc/crypto"
+	"github.com/ebceco/ebc/metrics"
+	"github.com/ebceco/ebc/p2p"
+	"github.com/ebceco/ebc/p2p/enode"
+	"github.com/ebceco/ebc/rpc"
 )
 
 // PrivateAdminAPI is the collection of administrative API methods exposed only

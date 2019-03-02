@@ -31,12 +31,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/crypto/ecies"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/swarm/api"
-	swarmapi "github.com/ethereum/go-ethereum/swarm/api/client"
-	"github.com/ethereum/go-ethereum/swarm/testutil"
+	"github.com/ebceco/ebc/crypto"
+	"github.com/ebceco/ebc/crypto/ecies"
+	"github.com/ebceco/ebc/log"
+	"github.com/ebceco/ebc/swarm/api"
+	swarmapi "github.com/ebceco/ebc/swarm/api/client"
+	"github.com/ebceco/ebc/swarm/testutil"
 	"golang.org/x/crypto/sha3"
 )
 

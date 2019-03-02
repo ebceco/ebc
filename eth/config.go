@@ -24,13 +24,13 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/eth/gasprice"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/ebceco/ebc/common"
+	"github.com/ebceco/ebc/common/hexutil"
+	"github.com/ebceco/ebc/consensus/ethash"
+	"github.com/ebceco/ebc/core"
+	"github.com/ebceco/ebc/eth/downloader"
+	"github.com/ebceco/ebc/eth/gasprice"
+	"github.com/ebceco/ebc/params"
 )
 
 // DefaultConfig contains default settings for use on the Ethereum main net.

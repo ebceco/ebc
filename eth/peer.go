@@ -24,10 +24,10 @@ import (
 	"time"
 
 	mapset "github.com/deckarep/golang-set"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/ebceco/ebc/common"
+	"github.com/ebceco/ebc/core/types"
+	"github.com/ebceco/ebc/p2p"
+	"github.com/ebceco/ebc/rlp"
 )
 
 var (

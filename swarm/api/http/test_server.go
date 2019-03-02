@@ -23,9 +23,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/swarm/api"
-	"github.com/ethereum/go-ethereum/swarm/storage"
-	"github.com/ethereum/go-ethereum/swarm/storage/feed"
+	"github.com/ebceco/ebc/swarm/api"
+	"github.com/ebceco/ebc/swarm/storage"
+	"github.com/ebceco/ebc/swarm/storage/feed"
 )
 
 type TestServer interface {

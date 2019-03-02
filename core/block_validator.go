@@ -19,10 +19,10 @@ package core
 import (
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/ebceco/ebc/consensus"
+	"github.com/ebceco/ebc/core/state"
+	"github.com/ebceco/ebc/core/types"
+	"github.com/ebceco/ebc/params"
 )
 
 // BlockValidator is responsible for validating block headers, uncles and

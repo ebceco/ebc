@@ -23,12 +23,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/simulations"
-	"github.com/ethereum/go-ethereum/p2p/simulations/adapters"
-	"github.com/ethereum/go-ethereum/swarm/network"
+	"github.com/ebceco/ebc/log"
+	"github.com/ebceco/ebc/node"
+	"github.com/ebceco/ebc/p2p/enode"
+	"github.com/ebceco/ebc/p2p/simulations"
+	"github.com/ebceco/ebc/p2p/simulations/adapters"
+	"github.com/ebceco/ebc/swarm/network"
 )
 
 func TestUpDownNodeIDs(t *testing.T) {

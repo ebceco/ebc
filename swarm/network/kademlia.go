@@ -24,9 +24,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/swarm/log"
-	"github.com/ethereum/go-ethereum/swarm/pot"
+	"github.com/ebceco/ebc/common"
+	"github.com/ebceco/ebc/swarm/log"
+	"github.com/ebceco/ebc/swarm/pot"
 )
 
 /*

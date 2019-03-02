@@ -22,10 +22,10 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/protocols"
-	"github.com/ethereum/go-ethereum/swarm/log"
-	"github.com/ethereum/go-ethereum/swarm/state"
+	"github.com/ebceco/ebc/p2p/enode"
+	"github.com/ebceco/ebc/p2p/protocols"
+	"github.com/ebceco/ebc/swarm/log"
+	"github.com/ebceco/ebc/swarm/state"
 )
 
 // SwAP Swarm Accounting Protocol

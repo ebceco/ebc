@@ -24,16 +24,16 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/bitutil"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/ebceco/ebc/common"
+	"github.com/ebceco/ebc/common/bitutil"
+	"github.com/ebceco/ebc/core"
+	"github.com/ebceco/ebc/core/rawdb"
+	"github.com/ebceco/ebc/core/types"
+	"github.com/ebceco/ebc/ethdb"
+	"github.com/ebceco/ebc/log"
+	"github.com/ebceco/ebc/params"
+	"github.com/ebceco/ebc/rlp"
+	"github.com/ebceco/ebc/trie"
 )
 
 // IndexerConfig includes a set of configs for chain indexers.

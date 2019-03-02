@@ -26,8 +26,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/ebceco/ebc/common"
+	"github.com/ebceco/ebc/crypto"
 )
 
 const jsondata = `

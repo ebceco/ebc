@@ -21,13 +21,13 @@ import (
 	"math/big"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/ebceco/ebc/common"
+	"github.com/ebceco/ebc/consensus/ethash"
+	"github.com/ebceco/ebc/core"
+	"github.com/ebceco/ebc/core/types"
+	"github.com/ebceco/ebc/crypto"
+	"github.com/ebceco/ebc/ethdb"
+	"github.com/ebceco/ebc/params"
 )
 
 // Test chain parameters.
