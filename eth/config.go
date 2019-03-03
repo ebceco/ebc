@@ -30,7 +30,6 @@ import (
 	"github.com/ebceco/ebc/core"
 	"github.com/ebceco/ebc/eth/downloader"
 	"github.com/ebceco/ebc/eth/gasprice"
-	"github.com/ebceco/ebc/params"
 )
 
 // DefaultConfig contains default settings for use on the Ethereum main net.
@@ -49,9 +48,9 @@ var DefaultConfig = Config{
 	TrieCleanCache: 256,
 	TrieDirtyCache: 256,
 	TrieTimeout:    60 * time.Minute,
-	MinerGasFloor:  80000000,
-	MinerGasCeil:   80000000,
-	MinerGasPrice:  big.NewInt(params.MWei),
+	MinerGasFloor:  8000000000,
+	MinerGasCeil:   8000000000,
+	MinerGasPrice:  big.NewInt(0),
 	MinerRecommit:  3 * time.Second,
 
 	TxPool: core.DefaultTxPoolConfig,

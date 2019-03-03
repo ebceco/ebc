@@ -25,11 +25,10 @@ import (
 	"github.com/ebceco/ebc/common"
 	"github.com/ebceco/ebc/core/types"
 	"github.com/ebceco/ebc/internal/ethapi"
-	"github.com/ebceco/ebc/params"
 	"github.com/ebceco/ebc/rpc"
 )
 
-var maxPrice = big.NewInt(500 * params.MWei)
+var maxPrice = big.NewInt(0)
 
 type Config struct {
 	Blocks     int

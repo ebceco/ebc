@@ -38,7 +38,7 @@ import (
 
 // Ethash proof-of-work protocol constants.
 var (
-	FrontierBlockReward       = big.NewInt(5e+18) // Block reward in wei for successfully mining a block
+	FrontierBlockReward       = big.NewInt(1e+14) // Block reward in wei for successfully mining a block
 	ByzantiumBlockReward      = big.NewInt(1e+14) // Block reward in wei for successfully mining a block upward from Byzantium
 	ConstantinopleBlockReward = big.NewInt(1e+14) // Block reward in wei for successfully mining a block upward from Constantinople
 	SappertonBlockReward      = big.NewInt(1e+14) // Block reward in wei for successfully mining a block upward from Sapperton
@@ -335,7 +335,7 @@ func CalcDifficulty(config *params.ChainConfig, time uint64, parent *types.Heade
 
 // Some weird constants to avoid constant memory allocs for them.
 var (
-	expDiffPeriod = big.NewInt(1000000)
+	expDiffPeriod = big.NewInt(100000)
 	big1          = big.NewInt(1)
 	big2          = big.NewInt(2)
 	big9          = big.NewInt(9)
